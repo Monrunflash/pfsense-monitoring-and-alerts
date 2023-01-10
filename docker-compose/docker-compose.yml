@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 services:
   influxdb:
     image: influxdb:1.8.4
@@ -23,5 +23,16 @@ services:
       - GF_SECURITY_ADMIN_USER=${GRAFANA_USERNAME}
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
 volumes:
-  influxdb-storage: "./influx-storage"
-  grafana-storage: "./grafana-storage"
+  influxdb-storage:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./influx-storage
+  grafana-storage:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./grafana-storage
+
