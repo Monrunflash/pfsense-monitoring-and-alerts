@@ -10,20 +10,19 @@ Before deploying, it's important to have an understanding of the architecture. F
 To deploy the docker-compose.yml, which is a configuration file, you can use the following methods:
 
 - Running the compose file with active logs:
-
-"""
+```
 sudo docker-compose up
-"""
+```
 
 - Running the compose file in the background, allowing you to close the terminal, and automatically restarting after a reboot:
-"""
+```
 sudo docker-compose up -d --restart=always
-"""
+```
 
 - Background execution with the capability of closing the terminal and after a reboot an automatic rebuild
-"""
+```
 sudo docker-compose up -d --restart=always
-"""
+```
 
 It is important to note that using `sudo` is only necessary if you are running the command as a non-root user.
 
