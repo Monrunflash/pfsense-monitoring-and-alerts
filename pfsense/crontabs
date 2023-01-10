@@ -1,0 +1,3 @@
+@reboot root nice -n 19 sh /path/to/ssh-check.sh &
+*/5 * * * * root sh /path/to/cpu-check.sh &
+0 0 * * * root sh /path/to/disk_usage.sh &
