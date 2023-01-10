@@ -48,7 +48,7 @@ while true; do
 
     # Send an email with the new log lines using the "mailsender.php" script
     echo "Sending email with new log lines"
-    php /root/sender/mailsender.php "ssh" "ssh"
+    php /root/pfsense/sender/mailsender.php "ssh" "ssh"
 
     # Wait 10 seconds before deleting the new log file
     sleep 10

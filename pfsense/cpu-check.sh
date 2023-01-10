@@ -51,5 +51,5 @@ fi
 if [ "$check_count" -eq "$max_checks" ]; then
     # Run the PHP script
     echo "sending"
-    php /root/sender/mailsender.php "cpu" "$cpu_usage"
+    php /root/pfsense/sender/mailsender.php "cpu" "$cpu_usage"
 fi
