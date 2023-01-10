@@ -7,6 +7,11 @@ This project is designed to enhance the monitoring and automation capabilities o
 
 Before deploying, it's important to have an understanding of the architecture. First, an InfluxDB database is needed to store the series of data from the pfSense firewall, which is collected by the Telegraf agent. After this, a Grafana instance is deployed, which depends on the InfluxDB database. In this example, we will be binding the InfluxDB and the Grafana database to a local directory to store all the data locally. However, in a production environment, it is recommended to have a shared NFS volume in a highly available setup and to mount the data on the system for safekeeping.
 
+First of all create the directories to store the data. 
+
+`mkdir grafana-storage`
+`mkdir influx-storage`
+
 To deploy the docker-compose.yml, which is a configuration file, you can use the following methods:
 
 - Running the compose file with active logs:
