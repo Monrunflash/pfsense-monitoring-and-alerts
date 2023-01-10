@@ -18,6 +18,6 @@ if [ "$percentage_of_usage" -ge "$max_disk_usage" ]; then
   echo "Sending email: Disk usage is at $percentage_of_usage% (threshold is $max_usage%)"
   php /root/pfsense/sender/mailsender.php "disk" "$percentage_of_usage"
 fi
-
+sleep 5
 # Remove the temporary file
 rm "$mailfile"
