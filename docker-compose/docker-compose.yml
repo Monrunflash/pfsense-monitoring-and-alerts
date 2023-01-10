@@ -17,6 +17,8 @@ services:
     volumes:
       - grafana-storage:/var/lib/grafana
       - ./grafana-provisioning/:/etc/grafana/provisioning
+      - ./grafana-provisioning/dashboard.yaml:/etc/grafana/provisioning/dashboards/main.yaml
+      - ./grafana-provisioning/dashboards:/var/lib/grafana/dashboards
     depends_on:
       - influxdb
     environment:
@@ -35,4 +37,3 @@ volumes:
       type: none
       o: bind
       device: ./grafana-storage
-
